@@ -21,7 +21,7 @@ view:
 ## Фичи
 ~~~
 feature:
-  name: advanced_search
+  name: 
   inputs:
   events:
   errors:
