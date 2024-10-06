@@ -10,15 +10,19 @@
 3. Файловая структура помещается в систему контроля версий
 4. Все изменения вносятся в виде коммитов
 ## Представления
+~~~
 view:
   attributes:
     name: string
     userTypeAccess: array
   children: array
   events: array
+~~~
 ## Фичи
+~~~
 feature:
   name: advanced_search
   inputs:
   events:
   errors:
+~~~
