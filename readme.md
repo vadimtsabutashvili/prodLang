@@ -9,16 +9,18 @@
 2. В качестве языка описания используется YAML по правилами, содержащимся в данном руководстве
 3. Файловая структура помещается в систему контроля версий
 4. Все изменения вносятся в виде коммитов
-## Представления
+## Модель
+### Представления
+1. В класс View входят Window, Page, Tabs, Overlay
+2. Подкласс View входят Elements
+3. В подкласс Elements входят Text, Button, Input, DropDown, Image, Video и логический подкласс Block
 ~~~
-view:
-  attributes:
-    name: string
-    userTypeAccess: array
-  children: array
-  events: array
+name: string
+userTypeAccess: array
+children: array
+events: array
 ~~~
-## Фичи
+### Фичи
 ~~~
 feature:
   name: 
