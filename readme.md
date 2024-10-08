@@ -21,7 +21,7 @@ _**permissions** (Array of String)_
 _**events** (Array of Event)_  
 Действия, которые могут совершаться с данным представлением. Может содержать  идентификатор feature,  
   
-_**children** (Array)_  
+_**children** (Array of View)_  
 Массив вложенных представлений  
 
 ### Производные от View
@@ -42,10 +42,9 @@ _**name** (String)_
 _**events** (Array of Event)_  
 Строчный идентификатор представления  
 
-
 ### Класс Event
 #### Свойства
-_**trigger** (String)_
+_**trigger** (String)_  
 _**action** (String)_   
 
 
