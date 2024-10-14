@@ -80,15 +80,15 @@ features:
   - &show_password_feature
     feature:
       name: show_password_feature
-      input: parent
+      input: show_password_state
       type: bool
       events:
         - event:
-            trigger: show_password в положении true
+            trigger: show_password_state == true
             action: Показать пароль в поле password_input
         - event:
-            trigger: show_password в положении false
-            action: Обфусировать пароль в поле password_input          
+            trigger: show_password_state == false
+            action: Обфусировать пароль в поле password_input           
 
 ~~~
 
