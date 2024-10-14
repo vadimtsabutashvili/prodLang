@@ -4,6 +4,85 @@
 Сложно нормально описать все требования в плоском документе 
 ### Решение
 Разделить описание на Представления (Views) и Фичи (Features). Применить подход ".. as Code" для формирования продуктовых требований к программным продуктам.
+### Пример
+~~~
+view:
+type: window
+name: login_form_view
+permissions: ["unauthorized"]
+children:
+  # Header
+  - block:
+    name: header
+    text: Авторизаия
+  # Form
+  - block:
+    name: login_form
+    children:
+     # header
+      - text: 'Пожалуйса введите свои логин и пароль'
+      - block:
+        # userName_input
+        name: userName_input
+        children:
+          - text: 'Логин'
+          - input: 
+            name: userName_input
+      - block:
+        # password_input
+        name: password_input
+        children:
+          - text: 'Пароль'
+          - input: 
+            name: password_input
+      - block:
+      # show_password_switch
+        name: show_password_switch
+        children:
+          - text: 'Показать пароль'
+          - input:
+            type: checkbox
+            name: show_password
+            features:
+              - *show_password_feature
+      - block:
+        # submit_button
+        name: submit_button
+        children:
+          - text: 'Войти'
+          - button:
+            name: login_button
+            features:
+              - event:
+                trigger: onClick
+                action: login_feature
+      - block:
+        # forgot_password_link
+        name: forgot_password_link
+        children:
+          - button:
+            name: forgot_password_link
+            features:
+              - event:
+                trigger: onClick
+                action: goto forgot_password_view
+
+# Inline feature
+features:
+  - &show_password_feature
+    feature:
+      name: show_password_feature
+      input: parent
+      type: bool
+      events:
+        - event:
+            trigger: show_password в положении true
+            action: Показать пароль в поле password_input
+        - event:
+            trigger: show_password в положении false
+            action: Обфусировать пароль в поле password_input          
+
+~~~
 ### Подход
 1. Каждое представлени или фича описывается в отдельном файле
 2. В качестве языка описания используется YAML по правилами, содержащимся в данном руководстве
