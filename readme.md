@@ -73,7 +73,7 @@ children:
             features:
               - event:
                 trigger: onClick
-                action: goto forgot_password_view
+                action: go forgot_password_view
 
 # Inline feature
 features:
