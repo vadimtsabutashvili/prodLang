@@ -25,24 +25,26 @@ children:
   - block:
     name: login_form
     children:
-     # header
+    # header
       - text: 'Пожалуйса введите свои логин и пароль'
       - block:
         # userName_input
         name: userName_input
         children:
           - text: 'Логин'
-          - input: 
+          - input:
+            tyoe: textField
             name: userName_input
+      # password_input
       - block:
-        # password_input
         name: password_input
         children:
           - text: 'Пароль'
-          - input: 
+          - input:
+            tyoe: textField 
             name: password_input
-      - block:
       # show_password_switch
+      - block:
         name: show_password_switch
         children:
           - text: 'Показать пароль'
@@ -51,8 +53,8 @@ children:
             name: show_password
             features:
               - *show_password_feature
+      # submit_button
       - block:
-        # submit_button
         name: submit_button
         children:
           - text: 'Войти'
@@ -62,8 +64,8 @@ children:
               - event:
                 trigger: onClick
                 action: login_feature
+      # forgot_password_link
       - block:
-        # forgot_password_link
         name: forgot_password_link
         children:
           - button:
