@@ -27,8 +27,8 @@ children:
     children:
     # header
       - text: 'Пожалуйса введите свои логин и пароль'
+      # userName_input
       - block:
-        # userName_input
         name: userName_input
         children:
           - text: 'Логин'
