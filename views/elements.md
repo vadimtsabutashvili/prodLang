@@ -13,11 +13,11 @@ _text_ - Текст
 _table_ - Таблица  
 _button_ - Кнопка  
 _inputField_ - Поле ввода  
-_dropDown_ - Поле ввода 
-_checkBox_ - Поле ввода  
-_radio_ - Поле ввода  
+_dropDown_ - Выпадающий список 
+_checkBox_ - Чекбокс  
+_radio_ - Радиокнопка 
 _image_ - Изображение  
 _video_ - Видео
 
-Следующая статья: [Функциональные блоки](./features/features.md)
+Следующая статья: [Функциональные блоки](./features/features.md)  
 [В начало](./readme.md)
