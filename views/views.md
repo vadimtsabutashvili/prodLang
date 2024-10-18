@@ -4,13 +4,13 @@
 _**name**_ (String)  <sup>_required_</sup>  
 Строчный идентификатор представления  
   
-_**permissions**_ (Array of String)  
+_**permissions**_ (array of String)  
 Массив типов пользовтелей, которые имеют доступ к представлению  
   
-_**events**_ (Array of Event)  
+_**events**_ (array of Event)  
 Действия, которые могут совершаться с данным представлением.  
   
-_**children**_ (Array of View)  
+_**children**_ (array of View)  
 Массив вложенных представлений  
 
 ## Производные от View
@@ -20,7 +20,5 @@ _overlay_ - модальное окно
 _page_ – страница  
 _block_ – логически объединяет несколько элементов в одном представлении
 
-  
-
-| [В начало](./readme.md) | [Элементы](./views/elements.md) |
-
+Следующая статья: [Элементы](./views/elements.md)  
+[В начало](./readme.md)
