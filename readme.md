@@ -1,9 +1,10 @@
 # ProdLang
 Фреймворк для формирования продуктовых требований к программным продуктам
 ## Содержание
-1. [Представления](./views/views.md)
-2. [Элементы](./views/elements.md)
-3. [Функциональные блоки](./features/features.md)
+1. Введение
+2. [Представления](./views/views.md)
+3. [Элементы](./views/elements.md)
+4. [Функциональные блоки](./features/features.md)
 
 ## Введение
 ### Проблема
@@ -22,66 +23,66 @@
 Пример описания страницы с формой авторизации.
 ~~~
 window:
-name: login_form_view
-permissions: ["unauthorized"]
-children:
-  # Header
-  - block:
-    name: header
-    text: Авторизаия
-  # Form
-  - block:
-    name: login_form
-    children:
-      # header
-      - text: 'Пожалуйса введите свои логин и пароль'
-      # userName_input
-      - block:
-        name: userName_input
-        children:
-          - text: 'Логин'
-          - input:
-            tyoe: textField
-            name: userName_input
-      # password_input
-      - block:
-        name: password_input
-        children:
-          - text: 'Пароль'
-          - input:
-            tyoe: textField 
-            name: password_input
-      # show_password_switch
-      - block:
-        name: show_password_switch
-        children:
-          - text: 'Показать пароль'
-          - input:
-            type: checkbox
-            name: show_password
-            features:
-              - *show_password_feature
-      # submit_button
-      - block:
-        name: submit_button
-        children:
-          - text: 'Войти'
-          - button:
-            name: login_button
-            features:
-              - event:
-                trigger: onClick
-                action: login_feature
-      # forgot_password_link
-      - block:
-        name: forgot_password_link
-        children:
-          - button:
-            name: forgot_password_link
-            features:
-              - event:
-                trigger: onClick
-                action: go forgot_password_view
+  name: login_form_view
+  permissions: ["unauthorized"]
+  children:
+    # Header
+    - block:
+      name: header
+      text: Авторизаия
+    # Form
+    - block:
+      name: login_form
+      children:
+        # header
+        - text: 'Пожалуйста введите свои логин и пароль'
+        # userName_input
+        - block:
+          name: userName_input
+          children:
+            - text: 'Логин'
+            - input:
+              tyoe: textField
+              name: userName_input
+        # password_input
+        - block:
+          name: password_input
+          children:
+            - text: 'Пароль'
+            - input:
+              tyoe: textField 
+              name: password_input
+        # show_password_switch
+        - block:
+          name: show_password_switch
+          children:
+            - text: 'Показать пароль'
+            - input:
+              type: checkbox
+              name: show_password
+              features:
+                - *show_password_feature
+        # submit_button
+        - block:
+          name: submit_button
+          children:
+            - text: 'Войти'
+            - button:
+              name: login_button
+              features:
+                - event:
+                  trigger: onClick
+                  action: login_feature
+        # forgot_password_link
+        - block:
+          name: forgot_password_link
+          children:
+            - button:
+              name: forgot_password_link
+              features:
+                - event:
+                  trigger: onClick
+                  action: go forgot_password_view
 
 # Inline feature
 features:
