@@ -12,6 +12,7 @@ _**features**_ (array of Event)
 _text_ - Текст  
 _table_ - Таблица  
 _button_ - Кнопка  
+_link_ - Ссылка
 _inputField_ - Поле ввода  
 _dropDown_ - Выпадающий список 
 _checkBox_ - Чекбокс  
