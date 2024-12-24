@@ -84,17 +84,25 @@ window:
             - text: 'Войти'
             - button:
               name: login_button
-              features:
+              feature:
                 - event:
                   trigger: onClick
                   action: run login_feature
+                  output:
+                    cases:
+                      - case: login_feature.output.cases.case == success
+                        action: go main_view where authorized_user.state = ["authorized"]
+                      - case: login_feature output == error
+                        action: show login_error_view 
+                         
+
         # forgot_password_link
         - block:
           name: forgot_password_link
           children:
             - link:
               name: forgot_password_link
-              features:
+              feature:
                 - event:
                   trigger: onClick
                   action: go forgot_password_view
